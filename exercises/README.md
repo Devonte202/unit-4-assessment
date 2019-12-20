@@ -28,15 +28,15 @@ To run ESLint, run `npx eslint solutions.js`
       ```javascript
       const myAccount = new SavingsAccount('Reuben');
       myAccount.name; // "Reuben"
-      myAccount.balance; // "$0"
+      myAccount.showBalance(); // "$0"
       myAccount.depositFunds(100); // "$100 Deposited"
-      myAccount.balance; // "$100"
+      myAccount.showBalance(); // "$100"
       myAccount.depositFunds(-100); // "Please include a deposit amount that is greater than 0"
-      myAccount.balance; // "$100"
+      myAccount.showBalance(); // "$100"
       myAccount.withdrawFunds(75); // "$75 withdrawn"
-      myAccount.balance; // "$25"
+      myAccount.showBalance(); // "$25"
       myAccount.withdrawFunds(26); // "Insufficient Funds"
-      myAccount.balance; // "$25"
+      myAccount.showBalance(); // "$25"
       ```
 3. Use the pseudo-classical object creation pattern to create a `Phone` constructor. `Phone` instances should be initialized with a `phoneNumber`. `Phone` objects should also have a `contacts` property, initialized with a value of an empty array. `Phone`s should have the following methods available to them:
     * `addContact`, which takes a `contact` object as a parameter and adds this object to the `contacts` property. The `contact` objects should consist of two properties, a `name` and a `phoneNumber`. `addContact` should return `<<contact name>> added.` However, if `addContact` is called with a `contact` that does not have a `name` or `phoneNumber` property, the method should simply return `Invalid`. Additionally, all phone numbers **must be ten digits**. Calling `addContact` with a `phoneNumber` that is not a ten digit string should return `Invalid`. 
